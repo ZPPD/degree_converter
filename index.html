@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='eng'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <style>
+    body {
+      margin-top: 70px;
+      background: #333;
+      color: #333;
+    }
+
+    h1 {
+      color: #e5e5e5;
+    }
+  </style>
+  <title>Degree Converter</title>
+</head>
+
+<body>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-6 offset-md-3'>
+        <h1 class='display-4 text-center mb-3'>Degree Converter</h1>
+        <form>
+          <div class='form-group'>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="select">Convert</label>
+              </div>
+              <select class="custom-select" id="select">
+                <option id='empty' selected value='1'>Choose ...</option>
+                <option id='celsSelect' value='2'>Celsuis</option>
+                <option id='fahrSelect' value="3">Fahrenheit</option>
+                <option id='kelvSelect' value="4">Kelvin</option>
+                <option id='newtSelect' value="5">Newton</option>
+              </select>
+            </div>
+            <input id='input' type='number' class='form-control form-control-lg' placeholder='Enter degrees...'>
+          </div>
+        </form>
+        <div id='output'>
+          <div id='celsiusConv' class='card bg-info p-3 mb-1'>
+            <div class='card-block'>
+              <h4>Celsius:</h4>
+              <div id='celsOutput'></div>
+            </div>
+          </div>
+          <div id='fahrenheitConv' class='card bg-light p-3 mb-1'>
+            <div class='card-block'>
+              <h4>Fahrenheit:</h4>
+              <div id='fahrOutput'></div>
+            </div>
+          </div>
+          <div id='kelvinConv' class='card bg-success p-3 mb-1'>
+            <div class='card-block'>
+              <h4>Kelvin:</h4>
+              <div id='kelvOutput'></div>
+            </div>
+          </div>
+          <div id='newtonConv' class='card bg-danger p-3 mb-1'>
+            <div class='card-block'>
+              <h4>Newton:</h4>
+              <div id='newtOutput'></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src='app.js'></script>
+</body>
+
+</html>
