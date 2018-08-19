@@ -12,45 +12,13 @@ const kelvin = document.getElementById('kelvSelect');
 const newton = document.getElementById('newtSelect');
 const empty = document.getElementById('empty');
 
-empty.addEventListener('click', function() {
-  celsius.classList.remove('active');
-  fahrenheit.classList.remove('active');
-  kelvin.classList.remove('active');
-  newton.classList.remove('active');
-});
-
-celsius.addEventListener('click', function() {
-  celsius.className = 'active';
-  fahrenheit.classList.remove('active');
-  kelvin.classList.remove('active');
-  newton.classList.remove('active');
-
-});
-
-fahrenheit.addEventListener('click', function() {
-  fahrenheit.className = 'active';
-  celsius.classList.remove('active');
-  kelvin.classList.remove('active');
-  newton.classList.remove('active');
-});
-
-kelvin.addEventListener('click', function() {
-  kelvin.className = 'active';
-  fahrenheit.classList.remove('active');
-  celsius.classList.remove('active');
-  newton.classList.remove('active');
-});
-
-newton.addEventListener('click', function() {
-  newton.className = 'active';
-  fahrenheit.classList.remove('active');
-  kelvin.classList.remove('active');
-  celsius.classList.remove('active');
-});
-
-
-
-
+//loop through options and toggle class active
+const options = document.querySelectorAll('option');
+//console.log(typeof(options));
+options.forEach(option => option.addEventListener('click', function(e){
+  options.forEach(option => option.classList.remove('active'));
+  e.target.className = 'active';
+}));
 
 //convert the input
 document.getElementById('input').addEventListener('input', function(e) {
