@@ -1,8 +1,8 @@
 //hide the cards in the beginning
-document.getElementById('celsiusConv').style.visibility = 'hidden';
-document.getElementById('fahrenheitConv').style.visibility = 'hidden';
-document.getElementById('kelvinConv').style.visibility = 'hidden';
-document.getElementById('newtonConv').style.visibility = 'hidden';
+document.getElementById('celsiusConv').style.display = 'none';
+document.getElementById('fahrenheitConv').style.display = 'none';
+document.getElementById('kelvinConv').style.display = 'none';
+document.getElementById('newtonConv').style.display = 'none';
 
 
 //event listener for selection
@@ -27,10 +27,10 @@ document.getElementById('input').addEventListener('input', function(e) {
   //celsius conversion
   if (celsius.className === 'active') {
     //show cards
-    document.getElementById('celsiusConv').style.visibility = 'hidden';
-    document.getElementById('fahrenheitConv').style.visibility = 'visible';
-    document.getElementById('kelvinConv').style.visibility = 'visible';
-    document.getElementById('newtonConv').style.visibility = 'visible';
+    document.getElementById('celsiusConv').style.display = 'none';
+    document.getElementById('fahrenheitConv').style.display = 'block';
+    document.getElementById('kelvinConv').style.display = 'block';
+    document.getElementById('newtonConv').style.display = 'block';
 
     //calcilate degrees
     document.getElementById('fahrOutput').innerHTML = degree * (9 / 5) + 32;
@@ -40,10 +40,10 @@ document.getElementById('input').addEventListener('input', function(e) {
   //fahrenheit conversion
   if (fahrenheit.className === 'active') {
     //show cards
-    document.getElementById('celsiusConv').style.visibility = 'visible';
-    document.getElementById('fahrenheitConv').style.visibility = 'hidden';
-    document.getElementById('kelvinConv').style.visibility = 'visible';
-    document.getElementById('newtonConv').style.visibility = 'visible';
+    document.getElementById('celsiusConv').style.display = 'block';
+    document.getElementById('fahrenheitConv').style.display = 'none';
+    document.getElementById('kelvinConv').style.display = 'block';
+    document.getElementById('newtonConv').style.display = 'block';
 
     //calculate degrees
     document.getElementById('celsOutput').innerHTML = (degree - 32) * (5 / 9);
@@ -53,10 +53,10 @@ document.getElementById('input').addEventListener('input', function(e) {
   //kelvin conversion
   if (kelvin.className === 'active') {
     //show cards
-    document.getElementById('celsiusConv').style.visibility = 'visible';
-    document.getElementById('fahrenheitConv').style.visibility = 'visible';
-    document.getElementById('kelvinConv').style.visibility = 'hidden';
-    document.getElementById('newtonConv').style.visibility = 'visible';
+    document.getElementById('celsiusConv').style.display = 'block';
+    document.getElementById('fahrenheitConv').style.display = 'block';
+    document.getElementById('kelvinConv').style.display = 'none';
+    document.getElementById('newtonConv').style.display = 'block';
 
     //calculate degrees
     document.getElementById('fahrOutput').innerHTML = (degree - 273) * (9 / 5) + 32;
@@ -66,10 +66,10 @@ document.getElementById('input').addEventListener('input', function(e) {
   //newton conversion
   if (newton.className === 'active') {
     //show cards
-    document.getElementById('celsiusConv').style.visibility = 'visible';
-    document.getElementById('fahrenheitConv').style.visibility = 'visible';
-    document.getElementById('kelvinConv').style.visibility = 'visible';
-    document.getElementById('newtonConv').style.visibility = 'hidden';
+    document.getElementById('celsiusConv').style.display = 'block';
+    document.getElementById('fahrenheitConv').style.display = 'block';
+    document.getElementById('kelvinConv').style.display = 'block';
+    document.getElementById('newtonConv').style.display = 'none';
 
     //calculate degrees
     document.getElementById('fahrOutput').innerHTML = degree * (60 / 11) + 32;
